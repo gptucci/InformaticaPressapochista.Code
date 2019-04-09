@@ -48,10 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interface\IInvioMail.cs" />
+    <Compile Include="Interface\IRepositoryGenerico.cs" />
     <Compile Include="InvioMailNewsLetter.cs" />
     <Compile Include="LocalDbContext.cs" />
     <Compile Include="Models\ListaMailNewsletter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\InvioMail.cs" />
+    <Compile Include="Service\RepositoryGenerico.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

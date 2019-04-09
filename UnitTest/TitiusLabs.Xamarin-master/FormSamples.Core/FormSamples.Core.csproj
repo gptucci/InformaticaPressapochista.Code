@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!--<PackageReference Include="" Version=""/>-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TitiusLabs.Forms\TitiusLabs.Forms.csproj" />
+    <ProjectReference Include="..\TitiusLabs.Core\TitiusLabs.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.5.0.129452" />
+  </ItemGroup>
+</Project>
