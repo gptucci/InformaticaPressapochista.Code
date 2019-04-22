@@ -22,8 +22,9 @@ namespace XUnitTestFocacBook
         }
 
         [Fact]
-        public void Test1()
+        public void Test_AperturaNuovaMaschera()
         {
+
             Mock<IFocacBookRepository> mockFocacBookRepository = new Mock<IFocacBookRepository>();
             mockFocacBookRepository.Setup(x => x.GetAllPost()).Returns(new System.Collections.Generic.List<AppFocGenova.Models.FocaccePost>());
 
@@ -32,7 +33,6 @@ namespace XUnitTestFocacBook
 
             var coreMethodsMock = new Mock<IPageModelCoreMethods>(MockBehavior.Strict);
 
-            //.Returns(Task.CompletedTask) perchè il metodo ritorna un task
             coreMethodsMock.Setup(x => x.PushPageModel<FocacciaPostEditViewModel>(It.IsAny<bool>())).Returns(Task.CompletedTask);
 
 
