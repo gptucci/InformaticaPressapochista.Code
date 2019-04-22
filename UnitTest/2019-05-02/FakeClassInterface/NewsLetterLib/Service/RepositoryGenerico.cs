@@ -14,10 +14,9 @@ namespace NewsLetterLib.Service
     {
         private LocalDbContext _context = null;
         private DbSet<T> table = null;
-        public RepositoryGenerico()
+        protected RepositoryGenerico()
         {
-            this._context = new LocalDbContext();
-            table = _context.Set<T>();
+
         }
         public RepositoryGenerico(LocalDbContext _context)
         {

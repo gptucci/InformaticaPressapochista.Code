@@ -59,8 +59,6 @@ namespace AppFocacBook
                 if (focaccePostselectedItem != null)
                 {
                     FocaccePostSelectedCommand.Execute(focaccePostselectedItem);
-                    //Application.Current.MainPage.Navigation.PushAsync(new FocacciaPostEditPage(focaccePostselectedItem));
-                    //SelectedItem = null;
                 }
             }
         }

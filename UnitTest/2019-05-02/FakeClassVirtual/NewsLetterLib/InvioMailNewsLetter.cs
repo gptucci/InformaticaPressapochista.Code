@@ -14,6 +14,11 @@ namespace BizMathLib
         private InvioMail invioMail;
         private RepositoryGenerico<ListaMailNewsletter> repositoryListaMailNewsletter;
 
+        private InvioMailNewsLetter()
+        {
+            
+        }
+
         public InvioMailNewsLetter(InvioMail _invioMail, RepositoryGenerico<ListaMailNewsletter> _repositoryListaMailNewsletter)
         {
             invioMail = _invioMail;

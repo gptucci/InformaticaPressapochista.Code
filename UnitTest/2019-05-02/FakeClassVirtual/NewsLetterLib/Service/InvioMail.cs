@@ -35,5 +35,6 @@ namespace NewsLetterLib.Service
             return true;
 
         }
+
     }
 }
