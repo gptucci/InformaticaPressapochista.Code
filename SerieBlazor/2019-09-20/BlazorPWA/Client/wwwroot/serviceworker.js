@@ -75,25 +75,23 @@ self.addEventListener('activate', event => {
 
 self.addEventListener('fetch', event => {
 
-    // Define the hostnames that you want to ignore
-    const ignoredHosts = ['localhost'];
 
-    // Destructure the hostname out of the event's request 
-    // URL by creating a new URL instance
-    const { hostname } = new URL(event.request.url);
-
-    // Bail out if our definition contains this url
-    if (ignoredHosts.indexOf(hostname) >= 0) {
-        return;
-    }
-
-
+    console.log('fetch: ' + event.request.url);
     event.respondWith(
-        caches.match(event.request, { ignoreSearch: true }).then(response => {
-            return response || fetch(event.request).then(response => {
-                caches.put(event.request, response.clone());
-                return response;
+        fetch(event.request).then(function (r) {
+            response = r;
+            caches.open(cacheName).then(function (cache) {
+                cache.put(event.request, response);
             });
+            return response.clone();
         })
+            .catch(function () {
+                    console.log('fetch - recupero da cache: ' + event.request.url);
+                    return caches.match(event.request);
+                })
+        
     );
+
+
+
 });
