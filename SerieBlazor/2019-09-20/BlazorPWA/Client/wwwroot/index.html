@@ -17,10 +17,10 @@
     <script src="_framework/blazor.webassembly.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
-            console.log('Registering service worker now');
+            console.log('Service worker in registrazione');
             navigator.serviceWorker.register('/serviceworker.js')
                 .then(function () {
-                    console.log('Service Worker Registered');
+                    console.log('Service Worker registrato con successo');
                 });
         }
     </script>
